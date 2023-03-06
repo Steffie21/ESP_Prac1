@@ -10,10 +10,19 @@ def plotTwiddleFactor(twiddleFactor):
     plt.grid()
     plt.show()
 
-N = 128#//(2^8)
+def bitReversal(n):
+    result = []
+    for a in range(n):
+        # print(bin(a)[2:].zfill(int(np.trunc(np.ceil(np.log2(n)))))[::-1])
+
+        result.append(int(bin(a)[2:].zfill(int(np.trunc(np.ceil(np.log2(n)))))[::-1], 2))
+    return result
+
+N = 8#//(2^8)
 twiddleFactor = []
 for i in range(N):
     twiddleFactor.append(np.exp(-1j*2*np.pi*i/N))
 
 plotTwiddleFactor(twiddleFactor)
+print(bitReversal(N))
 
