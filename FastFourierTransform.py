@@ -67,3 +67,10 @@ for a in range(0, (N+2)//2 +2, 8):
 
 ans_X = [0j, -4j, (1.414+1.414j), 0j, 0j, (-0-0j), (1.414-1.414j), (-0+4j)]
 print(X == ans_X)
+
+# t = np.linspace(0, 4000, 1000)
+# plt.plot(t, np.sin(2*np.pi*1000*t) + 0.5*np.sin(2*np.pi*2000*t+ np.pi*3/4))
+# print(list(range(0, 2250, 250)))
+# X.append(0)
+plt.plot(range(250, 2250, 250), X)
+plt.show()

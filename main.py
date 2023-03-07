@@ -7,10 +7,12 @@ from matplotlib import pyplot as plt
 # # sample spacing
 # T = 1.0 / 80.0
 
-fs = 1000 # Sampling Frequency
-t = np.arange(0, 1, 1/fs)
-f = 10  # Signal frequency
+fs = 16000 # Sampling Frequency
+t = np.arange(0, 8000, 1/fs)
+t = np.linspace(0, 4000, 8, endpoint=False)
+f = 3  # Signal frequency
 x = np.sin(2*np.pi*f*t)  # Signal
+x = np.sin(2*np.pi*1000*t) + 0.5*np.sin(2*np.pi*2000*t+ np.pi*3/4)
 
 # Compute the FFT using numpy
 X = np.fft.fft(x)
